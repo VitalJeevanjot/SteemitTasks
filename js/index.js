@@ -12,6 +12,7 @@ function showDiscussion(val) {
       $('#heading').html("Development");
       $(".collection").empty();
       $('#notfound').empty();
+      $('#tags').html("tag: task-development");
       steem.api.getDiscussionsByCreated({
         "tag": 'task-development',
         "limit": 100
@@ -53,6 +54,7 @@ function showDiscussion(val) {
       $('#heading').html("Designers");
       $('#loader').show();
       $(".collection").empty();
+      $('#tags').html("tag: task-graphics");
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
         "tag": 'task-graphics',
@@ -83,6 +85,7 @@ function showDiscussion(val) {
         </li> \
         ");
         }
+        $('#notfound').empty();
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
@@ -97,6 +100,7 @@ function showDiscussion(val) {
       $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
+      $('#tags').html("tag: task-bug-hunting");
       steem.api.getDiscussionsByCreated({
         "tag": 'task-bug-hunting',
         "limit": 100
@@ -126,6 +130,7 @@ function showDiscussion(val) {
           </li> \
           ");
         }
+        $('#notfound').empty();
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
@@ -137,6 +142,7 @@ function showDiscussion(val) {
 
 
     case 3:
+      $('#tags').html("tag: task-social");
       $('#heading').html("Influencers");
       $('#loader').show();
       $(".collection").empty();
@@ -170,6 +176,7 @@ function showDiscussion(val) {
             </li> \
             ");
         }
+        $('#notfound').empty();
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
@@ -180,6 +187,7 @@ function showDiscussion(val) {
 
 
     case 4:
+      $('#tags').html("tag: task-analysis");
       $('#heading').html("Data Analysts");
       $('#loader').show();
       $(".collection").empty();
@@ -213,6 +221,7 @@ function showDiscussion(val) {
               </li> \
               ");
         }
+        $('#notfound').empty();
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
@@ -223,6 +232,7 @@ function showDiscussion(val) {
 
 
     case 5:
+      $('#tags').html("tag: task-documentation");
       $('#heading').html("Tech Writers");
       $('#loader').show();
       $(".collection").empty();
@@ -256,6 +266,7 @@ function showDiscussion(val) {
                 </li> \
                 ");
         }
+        $('#notfound').empty();
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
@@ -265,6 +276,7 @@ function showDiscussion(val) {
 
 
     case 6:
+      $('#tags').html("tag: task-copywriting");
       $('#heading').html("Copywriters");
       $('#loader').show();
       $(".collection").empty();
@@ -298,7 +310,7 @@ function showDiscussion(val) {
                   </li> \
                   ");
         }
-
+        $('#notfound').empty();
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
