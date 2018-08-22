@@ -1,12 +1,14 @@
 $(document).ready(function() {
 
   showDiscussion(0);
+  $('#loader').hide();
 });
 
 function showDiscussion(val) {
   switch (val) {
 
     case 0:
+      $('#loader').show();
       $('#heading').html("Development");
       $(".collection").empty();
       $('#notfound').empty();
@@ -42,12 +44,14 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
 
     case 1:
       $('#heading').html("Designers");
+      $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
@@ -82,6 +86,7 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
@@ -89,6 +94,7 @@ function showDiscussion(val) {
 
     case 2:
       $('#heading').html("Bug Hunters");
+      $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
@@ -123,6 +129,7 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
@@ -131,6 +138,7 @@ function showDiscussion(val) {
 
     case 3:
       $('#heading').html("Influencers");
+      $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
@@ -165,6 +173,7 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
@@ -172,6 +181,7 @@ function showDiscussion(val) {
 
     case 4:
       $('#heading').html("Data Analysts");
+      $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
@@ -206,6 +216,7 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
@@ -213,6 +224,7 @@ function showDiscussion(val) {
 
     case 5:
       $('#heading').html("Tech Writers");
+      $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
@@ -247,12 +259,14 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
 
     case 6:
       $('#heading').html("Copywriters");
+      $('#loader').show();
       $(".collection").empty();
       $('#notfound').empty();
       steem.api.getDiscussionsByCreated({
@@ -288,6 +302,7 @@ function showDiscussion(val) {
         if (result.length === 0) {
           $('#notfound').html("No Post To Display.");
         }
+        $('#loader').hide();
       });
       break;
 
